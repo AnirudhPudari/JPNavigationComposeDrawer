@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.sampledrawer'
+    namespace 'com.example.jpsampledrawer'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.sampledrawer"
+        applicationId 'com.example.jpsampledrawer'
         minSdk 24
         targetSdk 33
         versionCode 1
