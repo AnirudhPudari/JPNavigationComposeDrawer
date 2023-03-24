@@ -1,0 +1,14 @@
+.gradle
+/local.properties
+**/local.properties
+.DS_Store
+app/build
+/build
+*/build
+*.idea
+*.iml
+*.bin
+/captures
+
+# Fastlane
+fastlane/report.xml
