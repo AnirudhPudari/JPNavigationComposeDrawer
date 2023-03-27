@@ -13,24 +13,24 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AppDrawer(
     route: String,
     modifier: Modifier = Modifier,
-    navigateToHome: () -> Unit,
-    navigateToSettings: () -> Unit,
-    closeDrawer: () -> Unit
+    navigateToHome: () -> Unit = {},
+    navigateToSettings: () -> Unit = {},
+    closeDrawer: () -> Unit = {}
 ) {
     ModalDrawerSheet(modifier = Modifier) {
         DrawerHeader(modifier)
-        Spacer(modifier = Modifier.padding(5.dp))
+        Spacer(modifier = Modifier.padding(dimensionResource(id = R.dimen.spacer_padding)))
         NavigationDrawerItem(
             label = {
                 Text(
@@ -68,7 +68,7 @@ fun DrawerHeader(modifier: Modifier) {
         horizontalAlignment = Alignment.Start,
         modifier = modifier
             .background(MaterialTheme.colorScheme.secondary)
-            .padding(15.dp)
+            .padding(dimensionResource(id = R.dimen.header_padding))
             .fillMaxWidth()
     ) {
 
@@ -77,10 +77,10 @@ fun DrawerHeader(modifier: Modifier) {
             contentDescription = null,
             contentScale = ContentScale.Crop,
             modifier = modifier
-                .size(70.dp)
+                .size(dimensionResource(id = R.dimen.header_image_size))
                 .clip(CircleShape)
         )
-        Spacer(modifier = Modifier.padding(5.dp))
+        Spacer(modifier = Modifier.padding(dimensionResource(id = R.dimen.spacer_padding)))
 
         Text(
             text = stringResource(id = R.string.app_name),
@@ -94,5 +94,5 @@ fun DrawerHeader(modifier: Modifier) {
 @Preview
 @Composable
 fun DrawerHeaderPreview() {
-//    AppDrawer(modifier = Modifier, route = AllDestinations.HOME)
+    AppDrawer(modifier = Modifier, route = AllDestinations.HOME)
 }
