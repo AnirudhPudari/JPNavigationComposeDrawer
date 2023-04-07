@@ -1,6 +1,8 @@
+<a href="https://jetc.dev/issues/158.html"><img src="https://img.shields.io/badge/As_Seen_In-jetc.dev_Newsletter_Issue_%23158-blue?logo=Jetpack+Compose&amp;logoColor=white" alt="As Seen In - jetc.dev Newsletter Issue #158"></a>
+
+
 # JPNavigationComposeDrawer
 
-<a href="https://jetc.dev/issues/158.html"><img src="https://img.shields.io/badge/As_Seen_In-jetc.dev_Newsletter_Issue_%23158-blue?logo=Jetpack+Compose&amp;logoColor=white" alt="As Seen In - jetc.dev Newsletter Issue #158"></a>
 
 A simple app to show how Navigation drawer is implemented using Jetpack Compose with latest Material 3 Design components.
 
